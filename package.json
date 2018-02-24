@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base structure in Webpack for the creation of npm modules in React",
   "main": "build/index.js",
   "scripts": {
