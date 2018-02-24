@@ -16,10 +16,6 @@
   ],
   "author": "Leonardo Rico Guevara - https://github.com/kevoj",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
