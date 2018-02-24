@@ -6,6 +6,6 @@ export {
 
 /**
  * Usage:
- * import { Example } from 'react-npm-component'
- * import * as ReactNpmComponent from 'react-npm-component'
+ * import { Example } from 'react-webpack-component'
+ * import * as ReactWebpackComponent from 'react-webpack-component'
  */

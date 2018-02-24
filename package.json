@@ -1,5 +1,5 @@
 {
-  "name": "react-npm-component",
+  "name": "react-webpack-component",
   "version": "1.0.0",
   "description": "Base structure in Webpack for the creation of npm modules in React",
   "main": "build/index.js",
@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevoj/react-webpack-component.git"
   },
   "keywords": [
     "React",
