@@ -1,12 +1,11 @@
 {
   "name": "react-webpack-component",
-  "version": "1.0.1",
-  "description": "Base structure in Webpack for the creation of npm modules in React",
-  "main": "build/index.js",
+  "version": "1.2.0",
+  "description": "Base structure in Webpack 4 for the creation of npm modules in React",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -14,22 +13,24 @@
   },
   "keywords": [
     "React",
-    "React-componente",
+    "Component",
     "webpack",
+    "webpack 4",
     "react-webpack"
   ],
-  "author": "Leonardo Rico Guevara - https://github.com/kevoj",
-  "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "webpack": "^3.11.0"
-  }
+    "react": "^16.2.0"
+  },
+  "author": "Leonardo Rico Guevara - https://github.com/kevoj",
+  "license": "MIT"
 }

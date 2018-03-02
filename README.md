@@ -1,29 +1,39 @@
 
 # react-webpack-component
 
-[![NPM version](https://badge.fury.io/js/react-webpack-component.svg)](https://npmjs.org/package/react-webpack-component) [![Build Status](https://travis-ci.org/kevoj/react-webpack-component.svg?branch=master)](https://travis-ci.org/kevoj/react-webpack-component) [![dependencies Status](https://david-dm.org/kevoj/react-webpack-component/status.svg)](https://david-dm.org/kevoj/react-webpack-component) [![devDependencies Status](https://david-dm.org/kevoj/react-webpack-component/dev-status.svg)](https://david-dm.org/kevoj/react-webpack-component?type=dev)
-[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://raw.githubusercontent.com/kevoj/role-calc/master/LICENSE)
+[![NPM version](https://badge.fury.io/js/react-webpack-component.svg)](https://npmjs.org/package/react-webpack-component) [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://raw.githubusercontent.com/kevoj/role-calc/master/LICENSE)
 
-> Base structure in Webpack for the creation of npm modules in React
+> Base structure in Webpack 4 for the creation of npm modules in React
 
 ### Installation
 
-* **Clone**
+**1. Clone**
 
 ```bash
-git clone https://github.com/kevoj/react-webpack-component.git
-cd react-webpack-component
+git clone https://github.com/kevoj/react-webpack-component.git your-react-component-name
+cd [your-react-component-name]
 npm install
 ```
+**2. Set name of the library**
+Replace in **package.json**
 
-* **Create Link**
+```json
+{
+    "name": "your-react-component-name",
+    ...
+}
+```
+**3. Create Link**
 
 ```bash
 npm run build
 npm link
 ```
+## Development
 
 ### Start
+
+Watch changes in mode development
 
 ```bash
 npm start
@@ -31,14 +41,15 @@ npm start
 
 ### Build
 
+Compile in mode production
+
 ```bash
 npm run Build
 ```
-
 ### Structure
 
 <pre> 
-|-- build (Compiled)
+|-- dist (Compiled)
 |   `-- index.js
 |-- src (Your code here, view example in code source...)
 |   |-- components
@@ -49,16 +60,15 @@ npm run Build
 ### Test the component in a project
 
 ```bash
-mkdir new-project (React project)
-cd new-project
-npm link react-webpack-component
+cd Existing-React-Project
+npm link your-react-component-name
 ```
 
 ### At this point you can already use your component, usage:
 
 ```javascript
 import React, { Component } from 'react';
-import { Example } from 'react-webpack-component'
+import { Example } from 'your-npm-name'
 
 class HelloWorld extends Component {
   render() {
@@ -68,6 +78,38 @@ class HelloWorld extends Component {
   }
 }
 export default HelloWorld;
+```
+
+## Production
+
+### Publish in NPM
+
+**1. Compile to production**
+
+```bash
+npm run build
+```
+
+**2. Login**
+
+```bash
+npm login
+# login with your credentials in https://www.npmjs.com/
+```
+
+**3. Upload package**
+
+**Note:** Verify your version of the component in **package.json**, you can not upload the same version twice
+
+```bash
+npm publish
+# Available in https://www.npmjs.com/package/your-react-component-name
+```
+Now, you can install your package with:
+
+```bash
+npm install your-react-component-name--save
+# :)
 ```
 
 ## License
