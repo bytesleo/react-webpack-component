@@ -15,6 +15,7 @@ cd [your-react-component-name]
 npm install
 ```
 **2. Set name of the library**
+
 Replace in **package.json**
 
 ```json
@@ -29,6 +30,7 @@ Replace in **package.json**
 npm run build
 npm link
 ```
+
 ## Development
 
 ### Start
@@ -68,7 +70,7 @@ npm link your-react-component-name
 
 ```javascript
 import React, { Component } from 'react';
-import { Example } from 'your-npm-name'
+import { Example } from 'your-react-component-name'
 
 class HelloWorld extends Component {
   render() {
