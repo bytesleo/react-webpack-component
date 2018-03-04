@@ -1,11 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
-        libraryTarget: 'commonjs2'
+        library: 'react-payscript',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [
@@ -14,14 +15,12 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 exclude: /(node_modules|bower_components|dist)/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env']
-                    }
+                    loader: 'babel-loader'
                 }
             }
         ]
     },
+    devtool: 'source-map',
     externals: {
         'react': 'commonjs react'
     }

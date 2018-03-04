@@ -1,11 +1,5 @@
-import ExampleComponent from './components/Example';
+import Example from './components/Example';
 
 export {
-  ExampleComponent as Example
+  Example
 };
-
-/**
- * Usage:
- * import { Example } from 'react-webpack-component'
- * import * as ReactWebpackComponent from 'react-webpack-component'
- */
