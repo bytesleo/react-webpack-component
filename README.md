@@ -51,10 +51,10 @@ npm run Build
 ### Structure
 
 <pre> 
-|-- dist (Compiled)
+|-- dist/lib (Compiled)
 |   `-- index.js
-|-- src (Your code here, view example in code source...)
-|   |-- components
+|-- src/lib (Your code here, view example in code source...)
+|   |-- Button/index.js
 |   `-- index.js
 `-- webpack.config.js
 </pre> 

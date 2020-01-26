@@ -1,27 +1,29 @@
-const path = require('path');
+const path = require("path");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-    entry: ['babel-polyfill', './src/index.js'],
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-        library: 'react-payscript',
-        libraryTarget: 'umd'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                include: path.resolve(__dirname, 'src'),
-                exclude: /(node_modules|bower_components|dist)/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            }
-        ]
-    },
-    devtool: 'source-map',
-    externals: {
-        'react': 'commonjs react'
-    }
+  entry: path.resolve(__dirname, "./src/lib/index.js"),
+  output: {
+    path: path.resolve(__dirname, "./dist/lib"),
+    filename: "index.js",
+    library: "",
+    libraryTarget: "commonjs"
+  },
+  externals: [nodeExternals()],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  }
 };
